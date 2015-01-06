@@ -1,0 +1,49 @@
+package edu.gatech;
+
+public class WC {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("#wordCounter");
+		
+		String str = "The quick brown fox jumps over the lazy dog";
+		
+		spaceChars(str);
+
+
+	}
+	
+	public static void splitWord(String str){
+		
+		String[] split = str.split(" ");
+		int wc = split.length;
+		
+		System.out.println("\"" + str + "\"" + " contains " + wc + " words.");
+		
+		
+		
+	}
+	
+	public static void spaceChars(String str){
+		
+		boolean wasSpace = true;
+		int wc = 0;
+		
+		for (int i = 0; i < str.length(); i++){
+			if (str.charAt(i)== ' '){
+				wasSpace = true;
+			}
+			else{
+				if(wasSpace)
+					wc++;
+				wasSpace = false;
+			}
+		}
+		
+		System.out.println("\"" + str + "\"" + " contains " + wc + " words.");
+		
+		
+	}
+
+}

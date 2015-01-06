@@ -1,0 +1,30 @@
+package edu.gatech;
+
+public class WC {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("Welcome to WC");
+		int wc = 0;
+		String str = "The quick brown fox jumps over the dog";
+		
+		boolean wasSpace = true;
+		
+		for (int i = 0; i < str.length(); i++){
+			if (str.charAt(i)== ' '){
+				wasSpace = true;
+			}
+			else{
+				if(wasSpace)
+					wc++;
+				wasSpace = false;
+			}
+		}
+		
+		System.out.println(str + " has " + wc + " words.");
+		
+
+	}
+
+}
